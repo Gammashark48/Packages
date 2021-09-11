@@ -1,0 +1,40 @@
+// Main.java
+import animal.carnivore.*;
+import animal.herbivore.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Lion tom = new Lion();
+		Giraffe jim = new Giraffe();
+		
+		System.out.println(tom.speak());
+		System.out.println(jim.speak());
+	}
+}
+
+// Animal.java
+package animal;
+
+public interface Animal {
+	public default String speak() {
+		return "This animal doesn't speak";
+	}    
+}
+// Lion.java
+package animal.carnivore;
+import animal.Animal;
+
+public class Lion implements Animal {
+
+	public String speak (){
+		return "The lion roars!";
+	}
+}
+
+// Giraffe.java
+package animal.herbivore;
+import animal.Animal;
+
+public class Giraffe implements Animal {
+}
