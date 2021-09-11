@@ -1,0 +1,13 @@
+import animal.carnivore.*;
+import animal.herbivore.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Lion tom = new Lion();
+		Giraffe jim = new Giraffe();
+		
+		System.out.println(tom.speak());
+		System.out.println(jim.speak());
+	}
+}
